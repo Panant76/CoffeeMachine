@@ -1,5 +1,7 @@
 package coffeemachine.entity;
 
+import coffeemachine.entity.drinks.Drink;
+
 public class GarbageContainer extends Container {
     private int currentState;
 

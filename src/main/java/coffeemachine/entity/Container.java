@@ -1,5 +1,7 @@
 package coffeemachine.entity;
 
+import coffeemachine.entity.drinks.Drink;
+
 public abstract class Container {
     int capacity;
     String name;
