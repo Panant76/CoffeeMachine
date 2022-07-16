@@ -1,20 +1,23 @@
 package coffeemachine.service;
 
+import coffeemachine.entity.drinks.BlackCoffee;
+import coffeemachine.entity.enums.Button;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class IOServiceImpl implements IOService {
+public class  IOServiceImpl implements IOService {
     private BufferedReader bufferedReader;
 
     public IOServiceImpl() {
         this.bufferedReader = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    public int read() {
+    public Button read() {
         try {
             String s = bufferedReader.readLine();
-            return Integer.parseInt(s);
+            return Button.values()[Integer.parseInt(s)];
         } catch (IOException e) {
             write("Произошла Ошибка. Повторите ввод");
             return read();

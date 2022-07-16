@@ -1,5 +1,8 @@
 package coffeemachine.entity.drinks;
 
+import coffeemachine.exception.ContainerProblemException;
+import coffeemachine.processmanager.CoffeeMachine;
+
 public abstract class Drink {
     private int coffee;
     private int milk;
@@ -22,4 +25,5 @@ public abstract class Drink {
     public int getWater() {
         return water;
     }
+    public abstract void make(CoffeeMachine coffeeMachine) throws ContainerProblemException;
 }
